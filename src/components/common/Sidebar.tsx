@@ -123,19 +123,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside className="w-64 bg-white h-screen flex flex-col border-r border-neutral-200/80 select-none">
       {/* Brand Header */}
-      <div className="p-6 pb-4 border-b border-neutral-100 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-neutral-900 text-white flex items-center justify-center shadow-md">
-            <span className="font-extrabold tracking-tighter text-lg">IRIS</span>
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-bold text-neutral-900 text-base tracking-tight leading-none">IRIS</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-neutral-100 text-neutral-700">v1.0</span>
-            </div>
-            <p className="text-[11px] font-medium text-neutral-500 mt-1">Merchant Growth AI</p>
-          </div>
+      <div className="px-5 py-4 border-b border-neutral-100 flex items-center justify-between">
+        <div className="flex items-center">
+          <img
+            src="/iris-logo.png"
+            alt="IRIS — Merchant Growth AI"
+            className="h-9 w-auto object-contain cursor-pointer"
+            onClick={() => handleItemClick('dashboard')}
+          />
         </div>
+        <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-neutral-100 text-neutral-600">
+          v1.0
+        </span>
       </div>
 
       {/* Navigation List */}
